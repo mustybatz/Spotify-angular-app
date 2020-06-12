@@ -1,0 +1,12 @@
+<div class="mt-5" *ngIf="loading">
+  <app-loading ></app-loading>
+</div>
+
+<div class="alert alert-danger animated fadeIn mt-4" *ngIf="error">
+  <h3>Error</h3>
+  <p>{{ this.errMsg }}</p>
+</div>
+
+<app-tarjetas [items]="nuevasCanciones" *ngIf="!loading"></app-tarjetas>
+
+
